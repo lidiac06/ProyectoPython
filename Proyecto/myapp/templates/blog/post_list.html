@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<h2>{{ libro.titulo }}</h2>
+<p><strong>Autor/a:</strong> {{ libro.author }}</p>
+<p><strong>Género:</strong> {{ libro.genero }}</p>
+<p><strong>Rating:</strong> ⭐ {{ libro.rating }}</p>
+<h3>Reviews:</h3>
+
+{% for libro in libros %}
+<article>
+   <h2>{{libro.titulo}}</h2>
+   <p>{{libro.autor}}</p>
+   <p>{{libro.genero}}</p>
+</article>
+{% endfor %}
+
+<a class="nav-link" href="crear_post/">Deja tu reseña!</a>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+{% for libro in libros %}
+    <article>
+        <h2>{{libro.titulo}}</h2>
+        <p>{{libro.autor}}</p>
+        <p>{{libro.genero}}</p>
+    </article>
+ 
+{% endfor %}
+{% endblock content %}
+
